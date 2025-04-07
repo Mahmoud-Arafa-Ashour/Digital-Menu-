@@ -1,0 +1,124 @@
+<!-- <mat-card
+  class="menu-item p-0"
+  [fxLayout]="viewType == 'grid' ? 'column' : 'row'"
+  [ngClass]="[viewType + '-item', 'column-' + column]"
+>
+  <div
+    fxFlex="100"
+    [fxShrink]="viewType == 'grid' ? '3' : '2'"
+    class="thumbnail-section"
+  >
+    <div *ngIf="lazyLoad">
+      <img
+        [attr.data-src]="menuItem.image || menuItem.image"
+        class="w-100 d-block swiper-lazy ArtistPic"
+      />
+      <div class="swiper-lazy-preloader"></div>
+    </div>
+    <img
+      *ngIf="!lazyLoad"
+      [src]="menuItem.image"
+      class="w-100 d-block ArtistPic"
+    />
+  </div>
+  <div fxFlex="100" class="px-3 pt-3">
+    <div
+      fxLayout="column"
+      fxLayoutAlign="start stretch"
+      class="h-100 text-center"
+    >
+      <mat-card-content class="mb-0 p-0">
+        <h1 class="title">
+          <a>{{ menuItem.name || menuItem.name }}</a>
+        </h1>
+        <div class="mt-2">
+          <p class="description">
+            {{ menuItem.description || menuItem.description }}
+          </p>
+          
+          <div
+            *ngIf="viewType == 'list'"
+            fxShow="false"
+            fxShow.gt-sm="true"
+          ></div>
+        </div>
+      </mat-card-content>
+      <div class="sticky-footer-helper" fxFlex="grow"></div>
+      <div class="m-0 p-0">
+        <div
+          fxLayout="row"
+          fxLayoutAlign="space-between center"
+          class="divider mt-1"
+        >
+        <h2 class="primary-color">
+          {{ menuItem.price }}
+          <span>LE</span>
+        </h2>
+          <div >
+            <button
+              mat-icon-button
+              [disabled]="onCart()"
+              (click)="addToCart()"
+              matTooltip="Add To Cart"
+            >
+              <mat-icon>shopping_cart</mat-icon>
+            </button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-card> -->
+
+<mat-card
+  class="menu-item p-0"
+  [fxLayout]="viewType == 'grid' ? 'column' : 'row'"
+  [ngClass]="[viewType + '-item', 'column-' + column]"
+>
+  <div
+    fxFlex="100"
+    [fxShrink]="viewType == 'grid' ? '3' : '2'"
+    class="thumbnail-section"
+  >
+    <div *ngIf="lazyLoad">
+      <img [attr.data-src]="menuItem.image" class="w-100 d-block swiper-lazy" />
+      <div class="swiper-lazy-preloader"></div>
+    </div>
+    <img *ngIf="!lazyLoad" [src]="menuItem.image" class="w-100 d-block" />
+  </div>
+  <div fxFlex="100" class="p-1">
+    <div fxLayout="column" fxLayoutAlign="start stretch" class="h-100">
+      <mat-card-content class="mb-0 p-0">
+        <h1 class="title">
+          <a>{{ menuItem.name }}</a>
+        </h1>
+        <div class="mt-0 desc">
+          <p>{{ menuItem.description }}</p>
+        </div>
+      </mat-card-content>
+      <div class="sticky-footer-helper" fxFlex="grow"></div>
+      <div class="m-0 p-0">
+        <div
+          fxLayout="row"
+          fxLayoutAlign="space-between center"
+          class="divider mt-0"
+        >
+          <h2 class="primary-color">
+            {{ menuItem.price }} LE
+          </h2>
+          <div class="text-muted">
+            <button
+              mat-icon-button
+              [disabled]="onCart()"
+              (click)="addToCart()"
+              matTooltip="Add To Cart"
+            >
+              <mat-icon>shopping_cart</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-card>

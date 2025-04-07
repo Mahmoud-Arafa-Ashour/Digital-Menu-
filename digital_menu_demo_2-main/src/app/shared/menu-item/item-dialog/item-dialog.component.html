@@ -1,0 +1,21 @@
+<div>
+  <div mat-dialog-content class="p-0">
+    <img class="ArtistPic" [src]="menuItem.image" [alt]="menuItem.name" />
+    <div class="px-3 mt-1">
+      <h2 class="name"> {{menuItem.name }} </h2>
+      <p class="category_name"> {{menuItem.category_name }} </p>
+      <div class="pt-2 divider">
+        <p class="desc " [ngClass]="{'hidden': !menuItem.description}"><strong>Ingredients:</strong> {{ menuItem.description }}</p>
+        <p class="price" [ngClass]="{'center': !menuItem.description}">
+          <strong>Price:</strong>
+          <span class="primary-color pl-2" >{{ menuItem.price }} LE</span>
+        </p>
+      </div>
+   
+    </div>
+   
+  </div>
+</div>
+<div mat-dialog-close class="p-0">
+  <mat-icon class="close-btn">close</mat-icon>
+</div>

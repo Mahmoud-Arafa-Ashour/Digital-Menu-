@@ -1,0 +1,16 @@
+<div>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <img *ngIf="selectedLanguage === 'en'" src="assets/images/flags/en.svg" alt="English" >
+      <img *ngIf="selectedLanguage === 'ar'"  src="assets/images/flags/ar.svg" alt="Arabic" >
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="switchLanguage('en')">
+        <img src="assets/images/flags/en.svg" alt="English" style="width: 24px; height: 16px; margin-right: 8px;">
+        English
+      </button>
+      <button mat-menu-item (click)="switchLanguage('ar')">
+        <img src="assets/images/flags/ar.svg" alt="Arabic"  (change)="settings.rtl = !settings.rtl" labelPosition="before" style="width: 24px; height: 16px; margin-right: 8px;">
+        عربي
+      </button>
+    </mat-menu>
+  </div>

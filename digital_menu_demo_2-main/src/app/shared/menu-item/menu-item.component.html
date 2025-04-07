@@ -1,0 +1,32 @@
+<div class="menu-item p-0" fxLayout="row" fxLayoutAlign="space-between center" (click)="openDialog(menuItem)">
+  <div class="thumbnail-section " fxFlex="5" fxFlex.xs="17" fxFlex.md="10" fxFlex.lg="7">
+    <img [src]="menuItem.image" class="ArtistPic" alt="item" fxLayout="row" fxLayoutAlign="space-between center" />
+  </div>
+  <div class="px-2 w-100"  fxFlex="95" fxFlex.xs="82" fxFlex.md="90" fxFlex.lg="93">
+    <mat-card-content
+      fxLayout="row"
+      fxLayoutAlign="space-between center"
+      class="mb-0 p-0 w-100 bg-success"
+    >
+      <div
+        class="ppss bg-danger"
+        fxFlex="90"
+        fxLayout="column"
+        fxLayoutAlign="center start"
+      >
+        <h2 class="title bg-danger" fxFlex="100 ">
+          <a>{{ menuItem.name }}</a>
+        </h2>
+        <span class="desc single-line-text pr-2 bg-danger" fxFlex="100">
+          {{ menuItem.description }}
+        </span>
+      </div>
+      <div fxFlex="10">
+        <h2 class="primary-color price">
+          {{ menuItem.price }}
+          <span>LE</span>
+        </h2>
+      </div>
+    </mat-card-content>
+  </div>
+</div>

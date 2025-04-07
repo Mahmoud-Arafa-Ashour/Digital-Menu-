@@ -1,0 +1,40 @@
+<section class="RouterOutlet">
+  <app-header-carousel
+    *ngIf="settings.header == 'carousel'"
+    [slides]="slides"
+    [contentOffsetToTop]="true"
+    [fullscreen]="false"
+  >
+  </app-header-carousel>
+  <div class="section p-0 default mt-0">
+    <div class="table-responsive ">
+      <table class="px-3 w-100" >
+        <td *ngFor="let category of product">
+          <button
+            mat-raised-button
+            class="uppercase cat-btn"
+            (click)="scrollToElement(category.category_id)"
+          >
+            {{ category.category_name }}
+          </button>
+        </td>
+      </table>
+    </div>
+
+    <div fxLayout="column-reverse" fxLayout.xs="column-reverse">
+      <div class="theme-container" fxFlex.md="50" *ngFor="let item of product">
+        <div class="px-4">
+          <h2
+            class="section-title mt-0 scroll-margin-top"
+            #scrollTargetElement
+            [id]="item.category_id"
+          >
+            {{ item.category_name }}
+          </h2>
+          <app-menu-items-carousel [menuItems]="item.products">
+          </app-menu-items-carousel>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

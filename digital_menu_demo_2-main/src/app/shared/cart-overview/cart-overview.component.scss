@@ -1,0 +1,33 @@
+.title {
+    font-size: 14px !important;
+}
+
+
+.price-cont{
+    position: relative;
+    margin-bottom: 0 ;
+    font-size: 14px !important; 
+}
+.price-cur{
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    
+}
+.total-cont{
+    position: relative;
+    margin-bottom: 0 ;
+    font-size: 18px !important; 
+
+}
+.total-cur{
+    position: absolute;
+    top: -18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px !important; 
+
+    
+}

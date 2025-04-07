@@ -1,0 +1,37 @@
+<mat-toolbar color="primary" class="admin-toolbar mat-elevation-z2">
+  <div fxLayout="row" fxLayoutAlign="space-between center" class="w-100">
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <button mat-icon-button (click)="toggleSidenav()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <div class="logo-section">
+      <a routerLink="/"><app-logo></app-logo></a>
+      
+    </div>
+    <div fxLayout="row" fxLayoutAlign="end center">
+      <app-messages fxShow="true" fxShow.gt-xs></app-messages>
+      <app-user-menu></app-user-menu>
+    </div>
+  </div>
+</mat-toolbar>
+<mat-drawer-container class="admin-container">
+  <mat-drawer
+    #sidenav
+    [opened]="settings.adminSidenavIsOpened"
+    [mode]="settings.adminSidenavIsPinned ? 'side' : 'over'"
+    class="admin-sidenav mat-elevation-z6"
+    autoFocus="true"
+  >
+    <ng-scrollbar pointerEventsMethod="scrollbar" visibility="hover">
+      <app-admin-menu
+        [menuItems]="menuItems"
+        [menuParentId]="0"
+      ></app-admin-menu>
+    </ng-scrollbar>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-breadcrumb></app-breadcrumb>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

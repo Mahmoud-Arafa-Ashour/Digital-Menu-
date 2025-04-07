@@ -1,0 +1,15 @@
+<div *ngFor="let menuItem of menuItems" class="menu-item">
+  <a
+    *ngIf="!menuItem.hasSubMenu"
+    mat-button
+    fxLayout="row"
+    fxLayoutAlign="start center"
+    (click)="scrollToSection(menuItem.id)"
+    [class.active-link]="activeSection == menuItem.id"
+    [routerLinkActiveOptions]="{ exact: true }"
+    (click)="onClick(menuItem.id)"
+   
+  >
+    <span class="menu-title">{{ menuItem.title | translate }}</span>
+  </a>
+</div>

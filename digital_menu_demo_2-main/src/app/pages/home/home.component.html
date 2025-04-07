@@ -1,0 +1,50 @@
+<section class="RouterOutlet mb-4">
+  <app-header-carousel
+    *ngIf="settings.header == 'carousel'"
+    [slides]="slides"
+    [contentOffsetToTop]="true"
+    [fullscreen]="false"
+  >
+  </app-header-carousel>
+  <div fxLayout="column" class="section px-3 default mt-5">
+    <a
+      fxLayout="row"
+      fxLayoutAlign="center enter"
+      class="logo"
+      routerLink="/"
+      color="primary-color"
+    >
+      <app-logo fxFlex="60" fxFlex.xs="100"></app-logo>
+    </a>
+    <button mat-button class="mt-5 location_btn">
+      <mat-icon color="primary">location_on</mat-icon>
+      <a href="https://maps.app.goo.gl/KzCj8WxT4rrPrB5r8" target="_blank"
+        >Cairo: 12 Abbas El Akkad, Nasr City.</a
+      >
+    </button>
+    <p class="text-center welcome mt-3">
+      Welcome to Digital Menu Resturant and Cafe!, A 10% service charge is added
+      to all bills.
+    </p>
+
+    <div>
+      <mat-accordion fxLayout="column-reverse ">
+        <mat-expansion-panel
+          class="mb-3 w-100"
+          *ngFor="let item of product"
+          (opened)="(true)"
+          (closed)="(false)"
+          hideToggle
+        >
+          <mat-expansion-panel-header class="text-center cat-btn">
+            <mat-panel-title>
+              {{ item.category_name }}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <app-menu-items-carousel [menuItems]="item.products">
+          </app-menu-items-carousel>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,6 @@
+<ng-container *ngFor="let menuItem of menuItems">
+  <a *ngIf=" !menuItem.hasSubMenu" mat-button (click)="scrollToSection(menuItem.id)"
+  [class.active-link]="activeSection == menuItem.id" [routerLinkActiveOptions]="{exact:true}">
+    <span>{{ menuItem.title | translate }}</span>
+  </a>  
+</ng-container>

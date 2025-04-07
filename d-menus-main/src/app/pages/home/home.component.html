@@ -1,0 +1,47 @@
+<app-header-image
+  *ngIf="settings.header == 'image'"
+  [backgroundImage]="'assets/images/others/Hedder.jpg'"
+  [bgImageAnimate]="true"
+  [contentOffsetToTop]="true"
+  [title]="'HEADDER.TITLE' | translate"
+  [desc]="'HEADDER.DESC' | translate"
+  [isHomePage]="true"
+  [fullscreen]="false"
+>
+</app-header-image>
+
+<app-header-carousel
+  *ngIf="settings.header == 'carousel'"
+  [slides]="slides"
+  [contentOffsetToTop]="false"
+  [fullscreen]="false"
+>
+</app-header-carousel>
+
+<app-header-video
+  *ngIf="settings.header == 'video'"
+  [backgroundVideo]="'http://themeseason.com/data/videos/restaurant.mp4'"
+  [contentOffsetToTop]="true"
+  [title]="'Welcome to Restaurant'"
+  [desc]="'Booking a table online is easy'"
+  [isHomePage]="true"
+  [fullscreen]="false"
+>
+</app-header-video>
+
+<app-about id="2002" class="scroll-margin-top"></app-about>
+<app-our-services id="3003" class="scroll-margin-top"></app-our-services>
+<app-our-awards id="4004" class="scroll-margin-top"></app-our-awards>
+
+<!-- <div class="section">
+  <div class="px-3">
+    <div class="theme-container">
+      <h1 class="section-title mb-3">Reservation</h1>
+            <p class="section-desc text-muted">We provide free, secure and instantly confirmed online reservation.</p>
+            <mat-card class="p-0" ngClass.lt-md="px-2 pb-2">
+                <app-reservation-form></app-reservation-form>  
+            </mat-card> 
+        </div>
+    </div>   
+</div>    -->
+<app-today-menu id="6006" class="scroll-margin-top"></app-today-menu>

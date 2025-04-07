@@ -1,0 +1,67 @@
+
+.expanded:hover {
+  background: #9F1E34 !important;
+}
+
+.cat-btn {
+  background: #9F1E34 !important;
+  margin    : 0;
+}
+.location_btn{
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid #9f1e341f;
+}
+.mat-expansion-panel-body {
+  padding: 20 !important;
+}
+
+.expansion-panel-content {
+  text-align: center;
+  background: #9F1E34 !important;
+
+}
+
+.mat-expansion-panel-header-title,
+.mat-expansion-panel-header-description {
+  text-align     : center;
+  width          : 100%;
+  justify-content: center;
+  margin         : 0;
+  color          : #ffffff !important;
+  font-weight    : 500;
+  background     : #9F1E34 !important;
+  font-size      : 20px;
+}
+
+.welcome {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .welcome {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .section {
+    width : 75%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .section {
+    width : 60%;
+    margin: auto;
+  }
+
+}
+
+@media screen and (min-width: 1424px) and (max-width: 2560px) {
+  .section {
+    width : 50%;
+    margin: auto;
+  }
+}

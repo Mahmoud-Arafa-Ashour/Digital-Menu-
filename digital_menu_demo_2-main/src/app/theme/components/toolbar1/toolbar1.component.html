@@ -1,0 +1,20 @@
+<mat-toolbar id="top-toolbar" class="top-toolbar bg-nav">
+
+</mat-toolbar>
+<mat-toolbar id="main-toolbar" class="mat-elevation-z2 bg-nav">
+  <div
+  class="theme-container"
+  fxLayout="row"
+  fxLayoutAlign="space-between center"
+>
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <app-contacts fxLayout="row" fxLayoutAlign="start center"></app-contacts>
+  </div>
+  <app-social-icons
+    fxLayout="row"
+    fxLayoutAlign="start center"
+    fxShow="true"
+    fxShow.gt-md
+  ></app-social-icons>
+</div>
+</mat-toolbar>

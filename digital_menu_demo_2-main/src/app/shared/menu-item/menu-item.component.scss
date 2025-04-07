@@ -1,0 +1,66 @@
+@import "../../theme/styles/variables";
+
+.menu-item {
+    margin-bottom: 15px;
+    width        : 100% !important;
+    cursor: pointer;
+}
+
+.ArtistPic {
+    width          : 100% !important;
+    border-radius  : 50%;
+    background-size: cover;
+    object-fit     : cover;
+}
+
+.title {
+    font-family: $secondary-font-family;
+    font-size  : 18px;
+
+    a {
+        transition     : 0.2s;
+        text-decoration: none;
+    }
+}
+
+.price {
+    font-size: 18px;
+    text-wrap: nowrap;
+
+}
+
+.single-line-text {
+    white-space  : nowrap;
+    overflow     : hidden;
+    text-overflow: ellipsis;
+    width        : 100%;
+    box-sizing   : border-box;
+}
+
+.ppss {
+    width   : 100%;
+    overflow: hidden;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .menu-item {
+        padding: 0px !important;
+       
+    }
+
+    .title {
+        font-size: 16px;
+
+    }
+
+    .desc {
+        font-size  : 0.75rem !important;
+        line-height: normal;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+}

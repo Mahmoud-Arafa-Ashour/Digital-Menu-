@@ -1,0 +1,73 @@
+<div
+  class="header-carousel"
+  [class.offset-bottom]="contentOffsetToTop"
+  [class.fullscreen]="fullscreen"
+  [ngClass]="'toolbar-' + settings.toolbar"
+>
+  <div
+    *ngIf="slides.length > 1"
+    class="swiper-container h-100"
+    [swiper]="config"
+    (indexChange)="onIndexChange($event)"
+  >
+    <div class="swiper-wrapper h-100">
+      <div *ngFor="let slide of slides" class="swiper-slide">
+        <div
+          [attr.data-background]="slide.image"
+          class="slide-item swiper-lazy"
+        >
+          <div class="swiper-lazy-preloader"></div>
+        </div>
+      </div>
+    </div>
+    <button
+      mat-raised-button
+      color="primary"
+      class="swiper-button-prev swipe-arrow"
+    >
+      <mat-icon class="mat-icon-lg">keyboard_arrow_left</mat-icon>
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      class="swiper-button-next swipe-arrow"
+    >
+      <mat-icon class="mat-icon-lg">keyboard_arrow_right</mat-icon>
+    </button>
+
+    <div class="mask"></div>
+    <!-- <div
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      class="slide-info text-center"
+      id="slide-info"
+      [dir]="settings.rtl ? 'rtl' : 'ltr'"
+    >
+      <mat-card class="p-4" >
+        <h3 class="slide-title" >{{ currentSlide.name }}</h3>
+        <p class="desc" >{{ currentSlide.description }}</p>
+        <div
+          fxLayout="column"
+          fxLayoutAlign="center center "
+          class="divider mt-1 cart"
+         
+        >
+          <h3 class="primary-color price">
+            {{ currentSlide.price }}
+            <span> LE</span>
+          </h3>
+          <div>
+            <button
+              mat-icon-button
+              [disabled]="onCart()"
+              (click)="addToCart()"
+              matTooltip="Add To Cart"
+            >
+              <mat-icon>shopping_cart</mat-icon>
+            </button>
+          </div>
+        </div>
+      </mat-card>
+    </div> -->
+  </div>
+</div>

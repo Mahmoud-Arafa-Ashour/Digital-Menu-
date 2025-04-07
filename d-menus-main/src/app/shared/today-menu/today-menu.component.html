@@ -1,0 +1,212 @@
+<div class="section mb-6">
+  <div class="theme-container">
+    <h1 class="section-title mb-3">{{ "OUR_PRICING.TITLE" | translate }}</h1>
+    <p class="section-desc text-muted">
+      {{ "OUR_PRICING.DESC" | translate }}
+    </p>
+    <div class="theme-container">
+      <div
+        fxLayout="row wrap"
+        fxLayoutAlign="space-around center"
+        class="services-wrapper"
+      >
+        <div fxFlex="33" fxFlex.sm="50"  fxFlex.xs="100" class="p-3">
+          <mat-card class="p-0">
+            <div
+              class="py-3"
+              [ngClass.gt-sm]="settings.rtl ? 'pr-5' : 'pl-5'"
+              ngClass.sm="px-3 feature"
+              ngClass.xs="px-3 feature"
+            >
+              <div class="today-menu">
+                <h1 class="title secondary-font">
+                  <a class="menu-item-name">{{ "OUR_PRICING.FREE_NAME" | translate }}</a>
+                </h1>
+
+                <h1 class="primary-color py-1">
+                 {{ "OUR_PRICING.FREE_PRICE" | translate  | currency : "USD" : "symbol" : "1.2-2" }}
+                </h1>
+                <div fxLayout="row" fxLayoutAlign="start center">
+                  <span class="text-muted"> {{ "OUR_PRICING.FREE_DURATION" | translate }}</span>
+                </div>
+
+                <div class="py-3">
+                  <p fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon color="primary" class="mat-icon-sm"
+                      >check_circle</mat-icon
+                    >
+                    <span class="px-3 feature feature">{{ "OUR_PRICING.FREE_FEATURE_1" | translate }}</span>
+                  </p>
+                  <p fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon color="primary" class="mat-icon-sm "
+                      >check_circle</mat-icon
+                    >
+                    <span class="px-3 feature feature ">
+                      {{ "OUR_PRICING.FREE_FEATURE_2" | translate }}
+                    </span>
+                  </p>
+                  <p fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon color="primary" class="mat-icon-sm"
+                      >check_circle</mat-icon
+                    >
+                    <span class="px-3 feature ">{{ "OUR_PRICING.FREE_FEATURE_3" | translate }}</span>
+                  </p>
+                  <p fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon color="primary" class="mat-icon-sm"
+                      >check_circle</mat-icon
+                    >
+                    <span class="px-3 feature ">
+                      {{ "OUR_PRICING.FREE_FEATURE_4" | translate }}</span
+                    >
+                  </p>
+                  <p fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon color="primary" class="mat-icon-sm"
+                      >check_circle</mat-icon
+                    >
+                    <span class="px-3 feature ">{{ "OUR_PRICING.FREE_FEATURE_5" | translate }}</span>
+                  </p>
+                  <p fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon color="primary" class="mat-icon-sm"
+                      >check_circle</mat-icon
+                    >
+                    <span class="px-3 feature ">{{ "OUR_PRICING.FREE_FEATURE_6" | translate }}</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+        <div fxFlex="33" fxFlex.sm="50"  fxFlex.xs="100" class="p-3">
+          <mat-card class="p-0">
+            <div
+              class="py-3"
+              [ngClass.gt-sm]="settings.rtl ? 'pr-5' : 'pl-5'"
+              ngClass.sm="px-3 feature"
+              ngClass.xs="px-3 feature"
+            >
+              <div class="today-menu">
+                <h1 class="title secondary-font">
+                  <a class="menu-item-name">{{ "OUR_PRICING.SILVER_NAME" | translate }}</a>
+                </h1>
+
+                <h1 class="primary-color py-1">
+                  {{ "OUR_PRICING.SILVER_PRICE" | translate  | currency : "USD" : "symbol" : "1.2-2" }}
+                </h1>
+                <div fxLayout="row" fxLayoutAlign="start center">
+                  <span class="text-muted">{{ "OUR_PRICING.SILVER_DURATION" | translate }}</span>
+                </div>
+
+                <div class="py-3">
+                  <p fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon color="primary" class="mat-icon-sm"
+                      >check_circle</mat-icon
+                    >
+                    <span class="px-3 feature ">{{ "OUR_PRICING.SILVER_FEATURE_1" | translate }}</span>
+                  </p>
+                  <p fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon color="primary" class="mat-icon-sm"
+                      >check_circle</mat-icon
+                    >
+                    <span class="px-3 feature ">
+                      {{ "OUR_PRICING.SILVER_FEATURE_2" | translate }}
+                    </span>
+                  </p>
+                  <p fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon color="primary" class="mat-icon-sm"
+                      >check_circle</mat-icon
+                    >
+                    <span class="px-3 feature ">{{ "OUR_PRICING.SILVER_FEATURE_3" | translate }}</span>
+                  </p>
+                  <p fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon color="primary" class="mat-icon-sm"
+                      >check_circle</mat-icon
+                    >
+                    <span class="px-3 feature ">
+                      {{ "OUR_PRICING.SILVER_FEATURE_4" | translate }}</span
+                    >
+                  </p>
+                  <p fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon color="primary" class="mat-icon-sm"
+                      >check_circle</mat-icon
+                    >
+                    <span class="px-3 feature ">{{ "OUR_PRICING.SILVER_FEATURE_5" | translate }}</span>
+                  </p>
+                  <p fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon color="primary" class="mat-icon-sm"
+                      >check_circle</mat-icon
+                    >
+                    <span class="px-3 feature ">{{ "OUR_PRICING.SILVER_FEATURE_6" | translate }}</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+        <div fxFlex="33" fxFlex.sm="50"  fxFlex.xs="100" class="p-3">
+          <mat-card class="p-0">
+            <div
+              class="py-3"
+              [ngClass.gt-sm]="settings.rtl ? 'pr-5' : 'pl-5'"
+              ngClass.sm="px-3 feature"
+              ngClass.xs="px-3 feature"
+            >
+              <div class="today-menu">
+                <h1 class="title secondary-font">
+                  <a class="menu-item-name">{{ "OUR_PRICING.GOLD_NAME" | translate }}</a>
+                </h1>
+                <h1 class="primary-color py-1">
+                  {{ "OUR_PRICING.GOLD_PRICE" | translate  | currency : "USD" : "symbol" : "1.2-2" }}
+                </h1>
+                <div fxLayout="row" fxLayoutAlign="start center">
+                  <span class="text-muted">{{ "OUR_PRICING.GOLD_DURATION" | translate }}</span>
+                </div>
+                <div class="py-3">
+                  <p fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon color="primary" class="mat-icon-sm"
+                      >check_circle</mat-icon
+                    >
+                    <span class="px-3 feature "> {{ "OUR_PRICING.GOLD_FEATURE_1" | translate }}</span>
+                  </p>
+                  <p fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon color="primary" class="mat-icon-sm"
+                      >check_circle</mat-icon
+                    >
+                    <span class="px-3 feature ">
+                      {{ "OUR_PRICING.GOLD_FEATURE_2" | translate }}
+                    </span>
+                  </p>
+                  <p fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon color="primary" class="mat-icon-sm"
+                      >check_circle</mat-icon
+                    >
+                    <span class="px-3 feature ">{{ "OUR_PRICING.GOLD_FEATURE_3" | translate }}</span>
+                  </p>
+                  <p fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon color="primary" class="mat-icon-sm"
+                      >check_circle</mat-icon
+                    >
+                    <span class="px-3 feature ">
+                      {{ "OUR_PRICING.GOLD_FEATURE_4" | translate }}</span
+                    >
+                  </p>
+                  <p fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon color="primary" class="mat-icon-sm"
+                      >check_circle</mat-icon
+                    >
+                    <span class="px-3 feature ">{{ "OUR_PRICING.GOLD_FEATURE_5" | translate }}</span>
+                  </p>
+                  <p fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon color="primary" class="mat-icon-sm"
+                      >check_circle</mat-icon
+                    >
+                    <span class="px-3 feature ">{{ "OUR_PRICING.GOLD_FEATURE_6" | translate }}</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

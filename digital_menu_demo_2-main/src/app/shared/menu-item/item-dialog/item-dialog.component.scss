@@ -1,0 +1,87 @@
+.ArtistPic {
+    width          : 100% !important;
+    background-size: cover;
+    object-fit     : cover;
+    max-height     : 350px;
+}
+
+.dialog-container {
+    position: relative;
+
+}
+
+.center{
+    text-align: center;
+}
+.close-btn {
+    position        : absolute;
+    top             : 5px;
+    right           : 5px;
+    padding         : 0 !important;
+    text-align      : center;
+    border-radius   : 50%;
+    background-color: rgb(255, 255, 255);
+    border          : 1px solid rgb(52, 52, 52);
+    cursor          : pointer;
+    padding         : 5px;
+
+}
+
+.desc {
+    max-width: 350px;
+    font-size: 18px;
+
+}
+
+.name {
+    font-size : 25px;
+    text-align: center;
+
+}
+
+.category_name {
+    text-align   : center;
+    margin-bottom: 7px !important;
+}
+
+.price {
+    font-size  : 18px;
+    font-weight: 700;
+
+}
+
+.theme-dialog {
+    width: 300px !important;
+
+    .mat-mdc-dialog-container {
+        .mat-mdc-dialog-content {
+            width     : 300px !important;
+            max-height: 95vh !important;
+            width     : 300px !important;
+        }
+    }
+
+    .mat-mdc-dialog-actions {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .name {
+        font-size    : 18px;
+        margin-bottom: 0 !important;
+    }
+
+    .desc {
+        font-size: 15px !important;
+
+    }
+
+    .price {
+        font-size: 18px;
+    }
+}
+
+.hidden {
+    display: none;
+}

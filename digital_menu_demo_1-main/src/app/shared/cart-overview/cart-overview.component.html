@@ -1,0 +1,68 @@
+<mat-list *ngIf="appService.Data.cartList.length" class="cart-items">
+  <mat-list-item>
+    <div fxLayout="row" fxLayoutAlign="center center" class="w-100 -3">
+      <button
+        mat-icon-button
+        (click)="hideSheet(false)"
+        matTooltip="Hide"
+        class="p-0"
+      >
+        <mat-icon color="primary" class="mat-icon-lg"
+          >arrow_drop_down_circle</mat-icon
+        >
+      </button>
+    </div>
+  </mat-list-item>
+  <mat-list-item>
+    <div class="w-100 divider"></div>
+  </mat-list-item>
+  <mat-list-item *ngFor="let menuItem of appService.Data.cartList">
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="py-2">
+      <h6 class="fw-500 title">{{ menuItem.name }}</h6>
+      <div fxLayout="row" fxLayoutAlign="end center">
+        <h5 class="primary-color px-1">
+          {{ menuItem.price }}<span class="primary-color ">LE</span>
+        </h5>
+        <div class="px-1">
+          <app-quantity-counter
+            [value]="menuItem.cartCount"
+            [step]="1"
+            [min]="1"
+            [max]="1000"
+            [small]="true"
+            (onCounterChange)="counterChange(menuItem, $event)"
+          ></app-quantity-counter>
+        </div>
+        <button
+          mat-icon-button
+          color="warn"
+          class="remove"
+          (click)="remove(menuItem, $event)"
+          matTooltip="Remove"
+          matTooltipPosition="after"
+          class="p-0"
+        >
+          <mat-icon class="mat-icon-sm">close</mat-icon>
+        </button>
+      </div>
+    </div>
+  </mat-list-item>
+  <mat-list-item>
+    <div
+      fxLayout="row wrap"
+      fxLayoutAlign="center center"
+      class="w-100 divider"
+    >
+      <div fxLayout="row wrap" fxLayoutAlign="center center">
+        <h3 class="fw-500 py-3">Total:</h3>
+        <h3 class="primary-color">
+          {{ appService.Data.totalPrice }}
+          <span class="primary-color">LE</span>
+        </h3>
+      </div>
+    </div>
+  </mat-list-item>
+</mat-list>
+<div *ngIf="!menuItems.length" class="py-3 text-center">
+  <p>You have no items in your shopping cart</p>
+</div>

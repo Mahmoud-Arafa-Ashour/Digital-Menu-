@@ -1,0 +1,70 @@
+
+<div class="dialog">
+  <div class="header bg-primary">
+    <div fxLayout="row wrap" fxLayoutAlign="space-between center">
+      <h2 class="fw-500 secondary-font">
+        {{ menuItem ? "Edit" : "Add" }} Offer
+      </h2>
+    </div>
+  </div>
+  <form
+    [formGroup]="form"
+    (ngSubmit)="onSubmit()"
+    autocomplete="off"
+    
+  >
+    <div mat-dialog-content>
+      <div fxLayout="row wrap">
+        <div fxFlex="100" class="px-2 " fxFlex.gt-sm="35" *ngIf="showImage">
+          <app-image-upload
+            [base64]="form.controls.image.value"
+            [fileSize]="400"
+            [acceptTypes]="'image/png, image/jpeg, image/jpg'"
+            (onFileChange)="fileChange($event)"
+          >
+          </app-image-upload>
+        </div>
+        <div fxFlex="100" class="px-2 mt-3" fxFlex.gt-sm="65">
+          <div fxLayout="row wrap">
+            <div fxFlex="100" fxFlex.gt-sm="75" >
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="offer_name" />
+               
+              </mat-form-field>
+            </div>
+  
+            <div fxFlex="100" fxFlex.gt-sm="25">
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Price</mat-label>
+                <input matInput formControlName="price" required />
+                <mat-error *ngIf="form.controls.price.errors?.required"
+                  >Price is required</mat-error
+                >
+              </mat-form-field>
+            </div>
+  
+            <div fxFlex="100" >
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Description</mat-label>
+                <textarea
+                  matInput
+                  formControlName="offer_description"
+                  rows="3"
+                ></textarea>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div mat-dialog-actions>
+      <div fxLayout="row" fxLayoutAlign="space-between center" class="w-100">
+        <button mat-raised-button color="warn" type="button" mat-dialog-close>
+          Close
+        </button>
+        <button mat-raised-button color="primary" type="submit">Save</button>
+      </div>
+    </div>
+  </form>
+</div>
